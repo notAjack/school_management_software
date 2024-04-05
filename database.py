@@ -4,7 +4,7 @@ school = sqlite3.connect("school.db")
 
 curs = school.cursor()
 
-curs.execute("CREATE TABLE students (
+curs.execute("""CREATE TABLE students (
         admn_no integer,
         name text,
         parents_name text,
@@ -13,9 +13,8 @@ curs.execute("CREATE TABLE students (
         current_class integer,
         join_class_year integer,
         entrance_score integer,
-        from_kg text,
-        entrance_score
-    )")
+        from_kg text
+    )""")
 print(curs.fetchall())
 school.commit()
 school.close()
