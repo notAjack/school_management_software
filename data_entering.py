@@ -13,12 +13,14 @@ if studentorteacher == "teacher":
         teacher_columns[i] = (input("Enter " + teacher_columns[i] + ": "))
         i+=1        
     print(teacher_columns)
+    curs.execute("INSERT INTO teachers VALUES (eacher_columns)")
 
 elif studentorteacher == "student":
     for i in range(len(student_columns)):
         student_columns[i] = input("Enter " + student_columns[i] + ": ")
         i+=1
     print(student_columns)
+    curs.execute("INSERT INTO teachers VALUES (student_columns)")
 
 school.commit()
 school.close()
