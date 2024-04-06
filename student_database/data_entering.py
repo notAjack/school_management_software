@@ -10,13 +10,12 @@ school = sqlite3.connect("school.db")
 curs = school.cursor()
 
 if studentorteacher == "teacher":
-    for i in teacher_columns:
-        print(i)
-        for j in range(len(teacher_columns)):
-            print(j)
-            teacher_columns_values[j] = input("Enter "+ i + ": ")
-            print(teacher_columns_values[j])
-        
+    for i in range(len(teacher_columns)):
+        j=0
+        teacher_columns_values.append(input("Enter "+ teacher_columns[i] + ": "))
+        print(teacher_columns_values[j])
+        j+=1
+        i+=1        
 print(teacher_columns)
 
 #elsif studentorteacher == "student":
