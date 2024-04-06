@@ -13,7 +13,6 @@ if studentorteacher == "teacher":
 elif studentorteacher == "student":    
     print(curs.execute("""SELECT page_count * page_size as size FROM pragma_page_count(), pragma_page_size()
     """))
-sqlite.listdb()
 school.commit()
 school.close()
 
