@@ -5,7 +5,7 @@ school = sqlite3.connect("school.db")
 curs = school.cursor()
 
 curs.execute("""CREATE TABLE students (
-        admn_no integer,
+        admn_no integer PRIMARY KEY AUTOINCREMENT,
         name text,
         parents_name text,
         address text,
