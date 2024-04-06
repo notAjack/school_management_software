@@ -10,9 +10,9 @@ curs.execute("""CREATE TABLE students (
         parents_name text,
         address text,
         in_school text,
-        current_class integer,
-        join_class_year integer,
-        entrance_score integer,
+        current_class text,
+        join_class_year text,
+        entrance_score text,
         from_kg text
     )""")
 print(curs.fetchall())
