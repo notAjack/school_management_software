@@ -9,11 +9,14 @@ curs = school.cursor()
 
 if studentorteacher == "teacher":
     for i in teacher_columns:
-        i = input("Enter "+ i + ": ")
-        print(i)
+        for j in len(teacher_columns):
+            student_columns[j] = input("Enter "+ i + ": ")
+            print(j)
+        
 print(teacher_columns)
 
-elif studentorteacher == "student":
+#elsif studentorteacher == "student":
+#    print("haha")
 
 school.commit()
 school.close()
