@@ -15,6 +15,6 @@ curs.execute("""CREATE TABLE students (
         entrance_score text,
         from_kg text
     )""")
-print(curs.fetchall())
+    
 school.commit()
 school.close()

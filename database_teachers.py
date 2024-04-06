@@ -11,7 +11,5 @@ curs.execute("""CREATE TABLE teachers (
         class_teacher_of text
     )""")
 
-#curs.execute("INSERT INTO teachers VALUES ('1', 'teacher1', 'maths', '10')")
-print(curs.fetchall())
 school.commit()
 school.close()
