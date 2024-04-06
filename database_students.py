@@ -6,7 +6,7 @@ curs = school.cursor()
 
 curs.execute("""CREATE TABLE students (
         admn_no integer PRIMARY KEY AUTOINCREMENT,
-        name text,
+        student_name text,
         parents_name text,
         address text,
         in_school text,
