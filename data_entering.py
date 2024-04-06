@@ -10,12 +10,15 @@ curs = school.cursor()
 
 if studentorteacher == "teacher":
     for i in range(len(teacher_columns)):
-        teacher_columns[i]=(input("Enter "+ teacher_columns[i] + ": "))
+        teacher_columns[i] = (input("Enter " + teacher_columns[i] + ": "))
         i+=1        
-print(teacher_columns)
+    print(teacher_columns)
 
-#elsif studentorteacher == "student":
-#    print("haha")
+elif studentorteacher == "student":
+    for i in range(len(student_columns)):
+        student_columns[i] = input("Enter " + student_columns[i] + ": ")
+        i+=1
+    print(student_columns)
 
 school.commit()
 school.close()
