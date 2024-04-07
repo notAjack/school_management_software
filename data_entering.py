@@ -24,13 +24,14 @@ elif studentorteacher == "student":
     
     
     
-    #admn_no = curs.execute("SELECT TOP 1 admn_no FROM students ORDER BY admn_no DESC")
-    #curs.execute("""CREATE TABLE teachers (
-    #    teach_id integer PRIMARY KEY AUTOINCREMENT,
-    #    teacher_name text,
-    #    subject text,
-    #    class_teacher_of text
-    #)""")
+    curs.execute("SELECT admn_no FROM students ORDER BY admn_no DESC LIMIT 1")
+    print(curs.fetchone())
+    curs.execute("""CREATE TABLE teachers (
+        teach_id integer PRIMARY KEY AUTOINCREMENT,
+        teacher_name text,
+        subject text,
+        class_teacher_of text
+    )""")
 
 
 

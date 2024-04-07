@@ -7,8 +7,8 @@ import sqlite3
 school = sqlite3.connect("school.db")
 curs = school.cursor()
 
-print(curs.execute("SELECT admn_no FROM students ORDER BY admn_no DESC LIMIT 1"))
-
+curs.execute("SELECT admn_no FROM students ORDER BY admn_no DESC LIMIT 1")
+print(curs.fetchone())
 
 school.commit()
 school.close()
