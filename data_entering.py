@@ -22,11 +22,9 @@ elif studentorteacher == "student":
         i+=1
     curs.execute("INSERT INTO students (student_name, parents_name, address, in_school, current_class, join_class_year, entrance_score, from_kg) VALUES (?,?,?,?,?,?,?,?)", student_columns)
     
-    
-    
     curs.execute("SELECT admn_no FROM students ORDER BY admn_no DESC LIMIT 1")
     admn_no = curs.fetchone()
-    curs.execute("""CREATE TABLE teachers (
+    curs.execute(f"""CREATE TABLE {admn_no} (
         classes integer PRIMARY KEY AUTOINCREMENT,
         class_teacher text,
         outfees1 text,
