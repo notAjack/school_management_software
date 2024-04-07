@@ -8,19 +8,19 @@ school = sqlite3.connect("school.db")
 curs = school.cursor()
 
 curs.execute("SELECT admn_no FROM students ORDER BY admn_no DESC LIMIT 1")
-    admn_no = curs.fetchone()
-    str.admn_no
-    curs.execute(f"""CREATE TABLE {admn_no} (
-        classes integer PRIMARY KEY AUTOINCREMENT,
-        class_teacher text,
-        outfees1 text,
-        outfees2 text,
-        outfees3 text,
-        attendance text,
-        marks1 text,
-        marks2 text,
-        marks3 text
-    )""")
+admn_no = curs.fetchone()
+str.admn_no
+curs.execute(f"""CREATE TABLE {admn_no}(
+    classes integer PRIMARY KEY AUTOINCREMENT,
+    class_teacher text,
+    outfees1 text,
+    outfees2 text,
+    outfees3 text,
+    attendance text,
+    marks1 text,
+    marks2 text,
+    marks3 text
+)""")
 
 
 school.commit()
