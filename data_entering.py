@@ -21,6 +21,18 @@ elif studentorteacher == "student":
         student_columns[i] = input("Enter " + student_columns[i] + ": ")
         i+=1
     curs.execute("INSERT INTO students (student_name, parents_name, address, in_school, current_class, join_class_year, entrance_score, from_kg) VALUES (?,?,?,?,?,?,?,?)", student_columns)
+    
+    
+    
+    #admn_no = curs.execute("SELECT TOP 1 admn_no FROM students ORDER BY admn_no DESC")
+    #curs.execute("""CREATE TABLE teachers (
+    #    teach_id integer PRIMARY KEY AUTOINCREMENT,
+    #    teacher_name text,
+    #    subject text,
+    #    class_teacher_of text
+    #)""")
+
+
 
 school.commit()
 school.close()
