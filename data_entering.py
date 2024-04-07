@@ -25,12 +25,17 @@ elif studentorteacher == "student":
     
     
     curs.execute("SELECT admn_no FROM students ORDER BY admn_no DESC LIMIT 1")
-    print(curs.fetchone())
+    admn_no = curs.fetchone()
     curs.execute("""CREATE TABLE teachers (
-        teach_id integer PRIMARY KEY AUTOINCREMENT,
-        teacher_name text,
-        subject text,
-        class_teacher_of text
+        classes integer PRIMARY KEY AUTOINCREMENT,
+        class_teacher text,
+        outfees1 text,
+        outfees2 text,
+        outfees3 text,
+        attendance text,
+        marks1 text,
+        marks2 text,
+        marks3 text
     )""")
 
 
