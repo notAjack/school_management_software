@@ -10,6 +10,6 @@ curs.execute("""CREATE TABLE teachers (
         subject text,
         class_teacher_of text
     )""")
-
+    
 school.commit()
 school.close()
