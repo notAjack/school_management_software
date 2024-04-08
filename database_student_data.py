@@ -10,5 +10,6 @@ curs = school.cursor()
 
 
 
+
 school.commit()
 school.close()
