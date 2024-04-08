@@ -41,9 +41,5 @@ elif studentorteacher == "student":
         curs.execute(f"INSERT INTO {admn_no} (classes) VALUES ({i})")
 
 
-
-
-
-
 school.commit()
 school.close()
