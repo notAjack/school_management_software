@@ -26,9 +26,9 @@ elif studentorteacher == "student":
     curs.execute(f"""CREATE TABLE {admn_no} (
         classes integer PRIMARY KEY AUTOINCREMENT,
         class_teacher text,
-        outfees1 text,
-        outfees2 text,
-        outfees3 text,
+        fees1 text,
+        fees2 text,
+        fees3 text,
         attendance text,
         marks1pt text,
         marks2pt text,
