@@ -30,9 +30,12 @@ elif studentorteacher == "student":
         outfees2 text,
         outfees3 text,
         attendance text,
-        marks1 text,
-        marks2 text,
-        marks3 text
+        marks1pt text,
+        marks2pt text,
+        marks3hy text,
+        marks4pt text,
+        marks5pt text,
+        marks6fe text
     )""")
 
 
