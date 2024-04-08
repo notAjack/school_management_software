@@ -1,7 +1,7 @@
 import sqlite3
 
 studentorteacher = input("Enter Student Or Teacher: ")
-studentorteacher.lower
+studentorteacher = studentorteacher.lower()
 student_columns = ["student_name", "parents_name", "address", "in_school", "current_class", "join_class_year", "entrance_score", "from_kg" ]
 teacher_columns = ["teacher_name", "subject", "class_teacher_of"]
 
