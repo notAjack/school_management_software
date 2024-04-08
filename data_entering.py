@@ -24,7 +24,7 @@ elif studentorteacher == "student":
     curs.execute("SELECT admn_no FROM students ORDER BY admn_no DESC LIMIT 1")
     admn_no = ("s" + str(curs.fetchone()[0]))
     curs.execute(f"""CREATE TABLE {admn_no} (
-        classes integer PRIMARY KEY AUTOINCREMENT,
+        classes integer,
         class_teacher text,
         fees1 text,
         fees2 text,
@@ -37,6 +37,12 @@ elif studentorteacher == "student":
         marks5pt text,
         marks6fe text
     )""")
+    for i in range(1,15):
+        curs.execute(f"INSERT INTO {admn_no} (classes) VALUES ({i})")
+
+
+
+
 
 
 school.commit()
